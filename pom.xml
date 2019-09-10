@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.aspiremc.repo</groupId>
+    <artifactId>AspireSpigot-Hook</artifactId>
+    <version>1.0-RELEASE</version>
+
+    <distributionManagement>
+        <!-- Publish the versioned releases here -->
+        <repository>
+            <id>aspire-nexus</id>
+            <name>AspireSpigot-Hook</name>
+            <url>http://212.114.59.24:8081/repository/maven-releases/</url>
+        </repository>
+
+        <!-- Publish the versioned releases here -->
+        <snapshotRepository>
+            <id>aspire-nexus</id>
+            <name>AspireSpigot-Hook</name>
+            <url>http://212.114.59.24:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- download artifacts from this repo -->
+    <repositories>
+        <repository>
+            <id>aspire-nexus</id>
+            <name>aspire-nexus</name>
+            <url>http://212.114.59.24:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!-- download plugineches from this repo -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aspire-nexus</id>
+            <name>aspire-nexus</name>
+            <url>http://212.114.59.24:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.aspiremc.spigot</groupId>
+            <artifactId>server</artifactId>
+            <version>1.8.8-R0.2-RELEASE</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

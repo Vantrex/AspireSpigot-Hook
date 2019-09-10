@@ -1,0 +1,4 @@
+name: AspireSpigot-Hook
+authors: [Vantrex]
+version: 1.0
+main: de.aspire.hook.AspireSpigotHook
